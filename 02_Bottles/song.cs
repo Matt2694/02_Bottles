@@ -12,7 +12,7 @@
                 + " 2 bottles of beer."
                 + " Take one down and pass it around."
                 + " 1 bottle of beer on the wall.";
-            string finalSong = "";
+            string songBody = "";
             if(v == 0)
             {
                 return song0;
@@ -21,20 +21,16 @@
             {
                 return (song1 + " " + song0);
             }
-            if(v == 2)
-            {
-                return (song2 + " " + song1 + " " + song0);
-            }
             else
-            {
+            { 
                 for(int i = v; i > 2; i--)
                 {
-                    finalSong = finalSong + i + " bottles of beer on the wall."
+                    songBody = songBody + i + " bottles of beer on the wall."
                     + " " + i + " bottles of beer."
                     + " Take one down and pass it around."
                     + " " + (i - 1) + " bottles of beer on the wall. ";
                 }
-                return finalSong + song2 + " " + song1 + " " + song0;
+                return songBody + song2 + " " + song1 + " " + song0;
             }
         }
     }
